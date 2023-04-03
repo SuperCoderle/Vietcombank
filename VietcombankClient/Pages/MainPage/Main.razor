@@ -1,0 +1,22 @@
+﻿@page "/main"
+@inherits Services.UserCRUD
+@using VietcombankClient.Pages.Admin
+@using VietcombankClient.Pages.Customer
+
+<CascadingAuthenticationState>
+    <AuthorizeView Roles="Customer">
+        <Authorized>
+            <CustomerMain></CustomerMain>
+        </Authorized>
+    </AuthorizeView>
+    <AuthorizeView>
+        <NotAuthorized>
+            <Error></Error>
+        </NotAuthorized>
+    </AuthorizeView>
+    <AuthorizeView Roles="Administrator">
+        <Authorized>
+             <AdminMain></AdminMain>
+        </Authorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>

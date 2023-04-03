@@ -1,0 +1,102 @@
+﻿.menu-container {
+    width: 4em;
+}
+
+.menu{
+    top: 0;
+    left: 0;
+    width: 62px;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#03ac03, #999907);
+    overflow: hidden;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.menu li:nth-last-child(3)
+{
+    margin-top: 23rem;
+}
+
+.menu li a {
+    margin: 7px;
+    border-radius: 15px;
+    display: block;
+    text-indent: -500em;
+    line-height: 3em;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background 0.1s ease-in-out;
+}
+
+.menu li a:before {
+    font-family: FontAwesome;
+    speak: none;
+    text-indent: 0em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4em;
+}
+
+.menu li a.search:before {
+    content: "\f0ca";
+}
+.menu li a.logout:before {
+    content: "\f011";
+}
+.menu li a.settings:before {
+    content: "\f013";
+}
+.menu li a.contact:before {
+    content: "\f025";
+}
+.menu li a.language:before {
+    content: "\f0ac";
+}
+.menu li a.home:before {
+    content: "\f015";
+}
+.menu-bar li a:hover,
+.menu li a:hover,
+.menu li:first-child a {
+    background: #1a2632;
+    color: #fff;
+}
+
+@media all and (max-width: 500px) {
+    .container {
+        margin-top: 100px;
+    }
+
+    .menu {
+        height: 5em;
+        width: 100%;
+    }
+
+    .menu li {
+        display: inline-block;
+        float: left;
+    }
+}
+
+@media screen and (max-height: 34em) {
+    .menu li {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-height: 34em) and (max-width: 500px) {
+    .menu {
+        height: 3.5em;
+    }
+}

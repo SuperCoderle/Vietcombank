@@ -1,0 +1,497 @@
+﻿
+.header-customer {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: baseline;
+}
+
+.logo {
+    padding: 0 10px;
+}
+
+.header-customer .menu-wrap {
+    justify-items: stretch;
+}
+.header-customer .menu-wrap ul {
+    padding: 0;
+    margin: 0;
+}
+.header-customer .menu-wrap ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px 6px 15px 6px;
+}
+
+.header-customer .menu-wrap ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: -1px;
+}
+
+.fa:before {
+    font-size: 24px;
+}
+
+.menu-item {
+    border-left: 1px solid black;
+}
+
+.header-customer .hot-line {
+    border-radius: 10px;
+    border: 1px solid #58595b;
+    padding-right: 20px;
+    margin-left: 50px;
+    width: 200px;
+    display: flex;
+}
+
+.header-customer a .icon {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 57px;
+    flex: 0 0 57px;
+    max-width: 57px;
+    padding: 12px;
+    display: inline-block;
+}
+
+.header-customer a .icon img {
+    max-width: 32px;
+    border-style: none;
+    vertical-align: middle;
+}
+
+.header-customer a p {
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.header-customer a p .text1 {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #58595b;
+    white-space: nowrap;
+    
+}
+
+.header-customer a p .text2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #005030;
+    white-space: nowrap;
+}
+
+.slider {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.news-home .container .row .col-lg-9{
+    padding-left: 0;
+}
+
+.nav-link {
+    background: #fff;
+    font-weight: 500;
+    color: #404041;
+    border: 1px solid #6D6E70;
+    border-radius: 8px 8px 0 0;
+    width: 150px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.nav-link.active {
+    background-color: #404041;
+    color: white;
+    border-color: unset;
+}
+
+.nav-link:hover{
+    background-color: #404041;
+    color: white;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid black;
+}
+
+.news-home.tab-content > .tab-pane.active {
+    overflow: initial;
+    height: auto;
+}
+
+.news-home .inner-tab {
+    position: relative;
+}
+
+.owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.owl-stage-outer .owl-stage {
+    transform: translate3d(-12px, 0px, 0px);
+    transition: all 0s ease 0s;
+    width: 2772px;
+}
+
+.owl-stage-outer .owl-stage .owl-item {
+    width: 297.9px;
+    margin-right: 10px;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+}
+
+.slider .inner-slider {
+    position: relative;
+    height: 300px;
+    border-radius: 5px;
+    background-image: url(https://portal.vietcombank.com.vn/content/personal/KhoAnh/Anh%20CTKM/The/CTKM%202023/JCB%20Platinum/Banner%20web_1200x300.jpg?RenditionID=17);
+}
+
+.item-blog {
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    position: relative;
+}
+
+.item-blog a {
+    -webkit-transition: 1s all;
+    transition: 1s all;
+}
+
+.item-blog img {
+    height: 40%;
+    margin: auto 0;
+    max-width: 287px;
+    max-height: 300px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.item-blog .title {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 15px;
+    padding: 7px 12px;
+    margin: 0;
+    color: #404041;
+    list-style: disc;
+    line-height: normal;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.news-home .login-ibanking {
+    min-height: 182px;
+    margin-top: 43px !important;
+}
+
+.box-ibanking-2021 {
+    padding: 10px 10px;
+    width: 100%;
+    float: left;
+    min-height: 175px;
+    background: #fff;
+    border: 1px solid #B9D877;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.box-ibanking-2021 h3 {
+    margin-top: -45px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 60%;
+    margin-left:  auto!important;
+    margin-right: auto!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center!important;
+}
+
+.buttons a {
+    text-align: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.buttons a:hover {
+  background-image: linear-gradient(green, green);
+  color: white;
+  border: 1px solid lightblue;
+}
+
+.buttons .button-login {
+    transition: right 2s;
+    transition-delay: 0.8s;
+    align-items: center;
+    width: 130px;
+    height: 40px;
+}
+
+.buttons .button-signup {
+    transition: right 2s;
+    transition-delay: 0.5s;
+    width: 130px;
+    height: 40px;
+}
+
+.buttons {
+    top: 50%;
+    transform: translateY(-30%);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+.button {
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 200px;
+    height: 30px;
+    display: block;
+    outline: none;
+}
+
+
+
+.toggle-footer {
+    background-image: linear-gradient(#022502d4, #002d00)
+}
+
+.category-khcn footer {
+    background-color: #00502f;
+    border-top: 2px solid #00502f;
+}
+
+footer .ft-control {
+    background-color: #fff;
+    padding: 10px;
+}
+
+footer .ft-control a {
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-angle-down:before {
+    content: "";
+}
+
+footer .ft-control .go-to-top {
+    margin-left: auto;
+}
+
+footer .box-link-icon {
+    padding: 20px 0 10px;
+    border-bottom: 2px solid #82BC00;
+    margin-bottom: 15px;
+}
+
+footer .box-link-icon {
+    padding: 20px 0 10px;
+    border-bottom: 2px solid #82BC00;
+    margin-bottom: 15px;
+}
+
+footer .footer-link .list-link {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+footer .footer-link .list-link .link-item .link {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+}
+
+footer .footer-link .list-link .link-item .link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid #fff;  
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+footer .ic_phone {
+    background-position: -24px -34px;
+}
+
+footer .icon {
+    background-image: url(https://portal.vietcombank.com.vn/Resources/2020/images/ic_footer.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 2px;
+    vertical-align: -5px;
+}
+
+footer .footer-link .footer-link-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.support-chat {
+    float: left;
+    width: 100%;
+}
+
+.ibooking .ic_booking {
+    background: url(https://portal.vietcombank.com.vn/Resources/2020/images/ic_booking.png) top left no-repeat;
+    width: 44px;
+    height: 44px;
+    margin: 5px 10px;
+    float: left;
+}
+
+footer .support-chat a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.ibooking span {
+    float: left;
+}
+
+.support-chat span {
+    padding-top: 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+footer .box-list-link {
+    padding-bottom: 20px;
+    background-image: url(https://portal.vietcombank.com.vn/Resources/2020/images/bg-footer.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+footer .ft-bot {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+footer .ft-bot .menu-link-ft {
+    padding-left: 0;
+    font-size: 15px;
+    font-weight: 500;
+    max-width: 60%;
+}
+.flex-wrap, .header .main-sub-mega, footer .ft-bot .menu-link-ft {
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+}
+
+footer .ft-bot .menu-link-ft a {
+    color: #404041;
+}
+
+footer .ft-bot .menu-link-ft li:not(:last-child)::after {
+    content: '|';
+    margin: 0 8px;
+    color: #404041;
+    font-size: 16px;
+}
+
+footer .ft-bot .social-list-link {
+    margin-left: auto;
+    padding-left: 0;
+}
+
+footer .ft-bot .social-list-link h5 {
+    padding-left: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #404041;
+    margin-bottom: 0;
+}
+
+.fa-facebook-f:before, .fa-facebook:before {
+    content: "";
+}
+
+footer .ft-bot .social-list-link .social-link a {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #404041;
+    border: 1px solid #404041;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 22px;
+}
+
+@media (min-width: 768px) {
+    .container, .box-alert {
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media (min-width: 992px) {
+    .container, .box-alert {
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media (min-width: 1300px) {
+    .container, .box-alert {
+        max-width: 1230px !important;
+    }
+}
+
+.flex-wrap, .header .main-sub-mega, footer .ft-bot .menu-link-ft {
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+}

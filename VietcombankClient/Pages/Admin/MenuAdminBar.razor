@@ -1,0 +1,35 @@
+﻿@inherits Services.AccountService
+
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <header class="header">
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://vcbdigibank.vietcombank.com.vn/assets/images/logo-white.svg" alt="" />
+                    </a>
+                </div>
+
+                <ul class="menu">
+                    <li class="account"><a href="#">@context.User.Identity.Name</a></li>
+                    <li class="logout"><a href="#" @onclick="() => Logout()">Logout</a></li>
+                </ul>
+            </header>
+        </Authorized>
+        <NotAuthorized>
+            <header class="header">
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://vcbdigibank.vietcombank.com.vn/assets/images/logo-white.svg" alt="" />
+                    </a>
+                </div>
+
+                <ul class="menu">
+                    <li class="login"><a href="#">Login</a></li>
+                    <li class="register"><a href="#">Register</a></li>
+                </ul>
+            </header>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
+

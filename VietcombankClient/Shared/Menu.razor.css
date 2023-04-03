@@ -1,0 +1,69 @@
+﻿.container {
+    width: 100%;
+    height: 3em;
+}
+ul {
+    position: absolute;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    left: 32%;
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 1px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+li input {
+    margin: auto;
+}
+
+.customBorder {
+    border-right: 1px solid red;
+}
+
+.form-search {
+    width: 12rem;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #728579;
+    overflow: hidden;
+    background-color: white;
+}
+
+.form-search input {
+    width: 80%;
+    border: 0;
+    outline: 0;
+}
+
+.form-search a {
+    padding: 1px 5px;
+}
+
+li a:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: relative;
+    background: black;
+    transition: width 0.2s ease-out 0s;
+    width: 0;
+}
+
+li a:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+

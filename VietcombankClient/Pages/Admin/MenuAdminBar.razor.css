@@ -1,0 +1,81 @@
+﻿/* header */
+
+.header {
+    background-image: linear-gradient(#000000b8, #100a0ac7);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li {
+    padding: 0.1rem;
+    border-bottom: solid 2px rgb(180 219 11 / 38%);
+}
+
+.header li a {
+    display: block;
+    color: rgb(108 219 36 / 98%);
+    text-decoration: none;
+}
+
+.header li a:hover {
+    transform: scale(1.1);
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+.header .menu .account a::before {
+    content: "\f007";
+    font-family: FontAwesome;
+    padding-right: 0.6em;
+}
+
+.header .menu .logout a::before, .header .menu .login a::before {
+    content: "\f08b";
+    font-family: FontAwesome;
+    padding-right: 0.6em;
+}
+
+.header .menu .register a::before {
+    content: "\f25d";
+    font-family: FontAwesome;
+    padding-right: 0.6em;
+}
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+}

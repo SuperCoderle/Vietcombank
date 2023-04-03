@@ -1,0 +1,28 @@
+﻿.main {
+    margin: 0;
+    padding: 0 5rem;
+}
+.main .page-header {
+    padding-top: 10px;
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}

@@ -1,0 +1,86 @@
+﻿/*For User*/
+
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+.row .col-3, .col-9 {
+    padding-bottom: 8.4rem;
+}
+
+.row .col-3 {
+    padding-top: 3rem;
+}
+
+.row .col-9 {
+    padding-top: 0.3rem;
+    background-image: linear-gradient(#1f1919, #2c2525);
+}
+
+.row .col-9 .logo {
+    padding-bottom: 42px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.row .col-3 .card {
+    border-radius: 0.5rem;
+    margin: 0 30px;
+    background-image: linear-gradient(#000000b8, #100a0ac7);
+}
+
+.row .col-3 .card .contact .card-img {
+    width: 20% !important;
+}
+
+p {
+    margin: 0;
+    font-size: 10px;
+}
+
+h6 {
+    font-size: 15px;
+}
+
+a {
+    color: green;
+}
+
+a:hover {
+    color: green;
+    text-decoration: none;
+}
+
+.carousel-item img {
+    border-radius: 15px;
+    width: 70%;
+    max-height: 200px;
+}
+
+.menu-item ul li {
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    max-width: 80px;
+    background-image: linear-gradient(#4aa94a, #b9714b9e);
+}
+
+.menu-item ul li a {
+    font-size: 11px;
+    padding: 0;
+    color: white;
+}
+.menu-item ul li span:before {
+    text-align: center;
+    font-family: FontAwesome;
+    speak: none;
+    text-indent: 0em;
+    font-size: 2.4em;
+    color: white;
+}
+.menu-item ul li span.retweet::before {
+    content: "\f079";
+}

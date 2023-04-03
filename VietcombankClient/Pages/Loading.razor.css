@@ -1,0 +1,46 @@
+﻿.v-loading-page {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.v-loading-page__dots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+}
+
+.v-loading-page__dot {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 50%;
+    animation-name: loading-dot;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+}
+
+.v-loading-page__dot--second {
+    animation-delay: 0.25s;
+}
+
+.v-loading-page__dot--third {
+    animation-delay: 0.5s;
+}
+
+@keyframes loading-dot {
+    35% {
+        transform: scale(2);
+        background-color: cornflowerblue;
+    }
+}

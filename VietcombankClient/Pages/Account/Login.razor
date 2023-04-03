@@ -1,0 +1,146 @@
+﻿@page "/login"
+@layout HomePageLayout
+@inherits Services.AccountService
+
+<PageTitle>Vietcombank Login</PageTitle>
+
+<div>
+    <div class="h-100">
+        <div class="bg--login bg--login-morning"></div>
+        <div class="logo-top">
+            <img alt="" src="https://vcbdigibank.vietcombank.com.vn/assets/images/logo-white.svg" />
+        </div>
+        <div class="table login-wrap">
+            <div class="td">
+                <div class="login">
+                    <div class="login-main">
+                        <div class="login-form-main">
+                            <div class="login-form-main-wrap">
+                                <div class="login-logo mb15 text-center">
+                                    <img width="208" src="https://vcbdigibank.vietcombank.com.vn/assets/images/logo-digibank.svg" />
+                                </div>
+                                <div class="login-welcome color-black text-center pb15">Kính chào quý khách</div> 
+                                <div class="login-alert login-info login-alert-has-toggle">
+                                    <div class="login-alert-inner">
+                                        <p> - Với khách hàng đã có tài khoản
+                                            <span class="inline-block">VCB Digibank</span>
+                                            :
+                                            <b>
+                                                <span class="inline-block">Tên đăng nhập</span>
+                                                là Số điện thoại đăng ký dịch vụ
+                                            </b>
+                                            <br />
+                                            - Với khách hàng chưa có tài khoản
+                                            <span class="inline-block">VCB Digibank</span>
+                                            :
+                                            <b>Tên đăng nhập là Tên đăng nhập VCB-iB@nking</b>
+                                            , để thực hiện chuyển đổi sang dịch vụ
+                                            <span class="inline-block">VCB Digibank</span>
+                                            mới.
+                                        </p>
+                                    </div>
+                                    <label class="login-alert-toggle show-xs color-primary" for="login-alert-1">
+                                        <span class="toggle-hide">Thu gọn</span>
+                                        <span class="toggle-show">Hiện thêm</span>
+                                    </label>
+                                </div>
+                                <div class="login-form list-mb20">
+                                    <form class="ng-untouched ng-pristine ng-invalid">
+                                        <div class="list-pb20">
+                                            <div class="form-group">
+                                                <div class="input-group input-group-material">
+                                                    <input aria-label="Username" autocomplete="off" class="input input-xs input-material ng-untouched ng-pristine ng-invalid" id="username" maxlength="100" name="username" type="text" placeholder="Tên đăng nhập" @bind="account.Username"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group-flex input-group-material input-group-slot-line">
+                                                    <div class="input-group ng-untouched ng-pristine ng-invalid" id="login" maxlength="20">
+                                                        <input aria-label="Password" autocomplete="off" class="input input-xs input-material" id="app_password_login" maxlength="20" type="password" placeholder="Mật khẩu" @bind="account.Password" required/>
+                                                    </div>
+                                                    <div class="input-group-slot no-border">
+                                                        <div class="input-group-slot-inner no-mr">
+                                                            <label class="ubtn ubg-secondary login-eye">
+                                                                <input aria-label="Password" checked class="hidden ng-untouched ng-pristine ng-invalid" name="hidepass" type="checkbox" />
+                                                                @*<div class="login-eye-slash"></div>*@
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ubtn-wrap-width-full mb15">
+                                                    <button class="no-m ubtn ubg-primary ubtn-md ripple" id="btnLogin" type="button" @onclick="Login">
+                                                        <span class="ubtn-text">
+                                                            Đăng nhập
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="text-center">
+                                                    <a class="link hover-line" href="/resetpassword">Quên mật khẩu?</a>
+                                                    <a class="d-flex justify-content-center mt10 align-items-center" target="_blank" href="https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/chuyen-doi-ib.pdf">
+                                                        <span class="link">
+                                                            Hướng dẫn chuyển đổi sang VCB Digibank
+                                                        </span>    
+                                                    </a>
+                                                    <a class="d-flex justify-content-center mt10" data-bs-target="#vcb-booking-menu" data-bs-toggle="modal">
+                                                        <span class="link m120 mr5">Đặt lịch hẹn với Vietcombank</span>
+                                                        <div class="new-ic">New</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="login-footer">
+            <div class="row row-10">
+                <div class="col">
+                    <div class="row row-10 justify-content-md-start justify-content-center">
+                        <div class="col-auto">
+                            <a target="_blank" href="https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/dieu-khoan-dk-kh-ca-nhan.html">
+                                <div class="footer-item color-white-3 hover-line hover-c"> Điều khoản sử dụng dịch vụ</div>    
+                            </a>
+                        </div>
+                        <div class="col-auto"> | </div>
+                        <div class="col-auto">
+                            <a target="_blank" href="https://portal.vietcombank.com.vn/Personal/BP/Pages/chi-tiet-bieu-phi.aspx?ItemID=68&devicechannel=default">
+                                <div class="footer-item color-white-3 hover-line hover-c"> Biểu phí dịch vụ</div>    
+                            </a>
+                        </div>
+                        <div class="col-auto"> | </div>
+                        <div class="col-auto">
+                            <a target="_blank" href="https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/hdsd-ib/pages/vi/menu.html">
+                                <div class="footer-item color-white-3 hover-line hover-c"> Hướng dẫn sử dụng dịch vụ</div>    
+                            </a>
+                        </div>
+                        <div class="col-auto"> | </div>
+                        <div class="col-auto">
+                            <a target="_blank" href="https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/huong-dan-giao-dich-an-toan.html">
+                                <div class="footer-item color-white-3 hover-line hover-c"> Hướng dẫn giao dịch an toàn</div>    
+                            </a>
+                        </div>
+                        <div class="col-auto"> | </div>
+                        <div class="col-auto">
+                            <a target="_blank" href="https://digibankm5.vietcombank.com.vn/get_file/ibomni/html/faq/index.html">
+                                <div class="footer-item color-white-3 hover-line hover-c"> Câu hỏi thường gặp</div>    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-auto ml-auto">
+                    <div class="row justify-content-center">
+                        <div class="col-auto d-flex justify-content-center align-items-center"></div>
+                        <div class="col-auto">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+﻿@page "/tableUser"
+@using VietcombankClient.Pages.Admin
+@inherits Services.UserCRUD
+
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <MenuAdminBar></MenuAdminBar>
+            <SideAdminBar></SideAdminBar>
+
+            <main>
+            <div id="wrapper">
+                <h1 class="text-center">Manage Users</h1>
+
+                <table id="keywords" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th><span>ID</span></th>
+                            <th><span>First Name</span></th>
+                            <th><span>Last Name</span></th>
+                            <th><span>Date Of Birth</span></th>
+                            <th><span>Email</span></th>
+                            <th><span>Phone</span></th>
+                            <th><span>Address</span></th>
+                            <th><span>Username</span></th>
+                            <th><span>Role</span></th>
+                            <th colspan="2"><span>Options</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var obj in users)
+                        {
+                            <tr>
+                                <td class="lalign">@obj.ID</td>
+                                <td>@obj.FirstName</td>  
+                                <td>@obj.LastName</td>
+                                <td>@obj.DateOfBirth</td>
+                                <td>@obj.Email</td>
+                                <td>@obj.Phone</td>
+                                <td>@obj.Address</td>
+                                <td>@obj.Username</td>
+                                <td>@obj.Role</td>
+                                <td>
+                                    <button class="btn btn-secondary" data-toggle="modal" data-target="#myForm" @onclick="() => UpdateClick(obj)">
+                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" @onclick="() => DeleteUser(obj.ID)">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @if (users.Count() == 0)
+                {
+                    <Loading></Loading>
+                }
+             </div> 
+             </main>
+
+            <div class="modal fade" id="myForm" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="myFormLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">@Title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="cf">
+                                <div class="half left cf">
+                                    <input type="text" id="input-id" placeholder="ID" @bind="user.ID">
+                                    <input type="email" id="input-firstname" placeholder="First Name" @bind="user.FirstName">
+                                    <input type="text" id="input-lastname" placeholder="Last Name" @bind="user.LastName">
+                                    <input type="number" maxlength="10" id="input-numberAccount" placeholder="Number Account" @bind="user.NumberAccount">
+                                    <select class="form-select" aria-label="role" @bind="user.Role">
+                                        @for(int i = 0; i < Roles.Length; i++)
+                                        {
+                                            <option>@Roles[i]</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="half right cf">
+                                    <input type="date" id="input-dateOfBirth" @bind="user.DateOfBirth">
+                                    <input type="email" id="input-email" placeholder="Email address" @bind="user.Email">
+                                    <input type="tel" maxlength="11" id="input-phone" placeholder="Phone" @bind="user.Phone">
+                                    <textarea name="address" type="text" id="input-address" placeholder="Address" @bind="user.Address"></textarea>
+                                </div>  
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            @if(Title == "Add New User")
+                            {
+                                <button type="button" class="btn btn-success" @onclick="CreateNewUser">Save Changes</button>
+                                <button type="button" class="btn btn-outline-success" @onclick="CreateClick">Reset</button>
+                            }
+                            else
+                            {
+                                <button type="button" class="btn btn-success" @onclick="UpdateUser">Save Changes</button>
+                                <button type="button" class="btn btn-outline-success" @onclick="CreateClick">Reset</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Authorized>
+        <NotAuthorized>
+            <Error></Error>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>

